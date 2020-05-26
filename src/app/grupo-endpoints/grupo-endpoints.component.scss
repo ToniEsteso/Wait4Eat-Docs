@@ -1,0 +1,20 @@
+.grupo-endpoints {
+  background-color: #74798e;
+  padding: 10% 10%;
+  padding-top: 2%;
+  margin-bottom: 2%;
+  border-radius: 25px;
+  &__titulo {
+    color: #dddddd;
+    font-size: 3.5rem;
+    font-weight: 300;
+    line-height: 1.2;
+  }
+
+  &:hover {
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.019),
+      0 6.7px 5.3px rgba(0, 0, 0, 0.021), 0 12.5px 10px rgba(0, 0, 0, 0.023),
+      0 22.3px 17.9px rgba(0, 0, 0, 0.027), 0 41.8px 33.4px rgba(0, 0, 0, 0.038),
+      0 100px 80px rgba(0, 0, 0, 0.07);
+  }
+}

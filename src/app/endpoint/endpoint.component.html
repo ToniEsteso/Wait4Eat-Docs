@@ -1,0 +1,27 @@
+<div class="endpoint">
+  <div class="endpoint__cabecera">
+    <div class="endpoint__verbo btn"
+      [ngClass]="{'btn-success': endpoint.verbo =='GET', 'btn-info': endpoint.verbo =='POST', 'btn-warning': endpoint.verbo =='PUT', 'btn-danger': endpoint.verbo =='DELETE'}">
+      {{endpoint.verbo}}</div>
+    <div class="endpoint__url">{{endpoint.url}}</div>
+  </div>
+  <div class="endpoint__descripcion">{{endpoint.descripcion}}</div>
+  <div *ngFor="let parametro of endpoint.parametros">
+    <div class="form-group">
+      <input *ngIf="parametro.tipo === 'number'" type="text" name="{{parametro.nombre}}" [(ngModel)]="parametro.valor"
+        placeholder="{{parametro.nombre}}" class="form-control">
+      <div class="text-area" *ngIf="parametro.tipo === 'json'">
+        <div class="text-area__cabecera">
+          <span class="text-area__boton" (click)="aplicarTemplate()">Template</span>
+        </div>
+        <textarea type="text" name="{{parametro.nombre}}" [(ngModel)]="parametro.valor"
+          placeholder="{{parametro.nombre}}" class="text-area__texto form-control" rows="10"></textarea>
+      </div>
+    </div>
+  </div>
+  <button (click)="llamarFuncion()" class="btn btn-info endpoint__boton">Pruébame</button>
+  <div class="endpoint__contenedor-respuesta" *ngIf="respuesta != null">
+    <pre class="endpoint__respuesta">{{respuesta}}</pre>
+  </div>
+  <div class="endpoint__tipo-acceso">*acceso: {{endpoint.tipoAcceso}}</div>
+</div>

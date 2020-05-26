@@ -1,0 +1,16 @@
+<div class="login" *ngIf="!isLoggedIn">
+  <div class="login__userName">
+    <input type="text" name="{{loginRequest.userName}}" class="form-control" [(ngModel)]="loginRequest.username"
+      placeholder="usuario">
+  </div>
+  <div class="login__password">
+    <input type="password" name="{{loginRequest.password}}" class="form-control" [(ngModel)]="loginRequest.password"
+      placeholder="contraseña">
+  </div>
+  <div class="login__contenedor-boton">
+    <div class="btn btn-info" (click)="logIn();">Entrar</div>
+  </div>
+</div>
+<div *ngIf="isLoggedIn">
+  {{mensajeLogeado}}
+</div>

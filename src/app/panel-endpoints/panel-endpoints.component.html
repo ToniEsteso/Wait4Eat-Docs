@@ -1,0 +1,17 @@
+<div class="panel-endpoints" id="top">
+  <div>
+    <div class="panel-endpoints__indice">
+      <div *ngFor="let grupoEndpoints of gruposEndpoints">
+        <div (click)="goTo(grupoEndpoints)" class="panel-endpoints__enlace">
+          {{grupoEndpoints}}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="panel-endpoints__endpoints">
+    <div *ngFor="let grupoEndpoints of gruposEndpoints">
+      <app-grupo-endpoints [tipo]="grupoEndpoints" id="{{grupoEndpoints}}"></app-grupo-endpoints>
+    </div>
+  </div>
+  <div class="panel-endpoints__back" (click)="goTo('top')">&#8679;</div>
+</div>

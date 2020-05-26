@@ -7,11 +7,12 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "deploygh": "ng build --prod --base-href https://ToniEsteso.github.io/Wait4Eat-Docs/ && ngh --dir=dist/Wait4Eat-Docs"
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "~8.2.14",
+    "@angular/animations": "^8.2.14",
     "@angular/common": "~8.2.14",
     "@angular/compiler": "~8.2.14",
     "@angular/core": "~8.2.14",
@@ -19,7 +20,9 @@
     "@angular/platform-browser": "~8.2.14",
     "@angular/platform-browser-dynamic": "~8.2.14",
     "@angular/router": "~8.2.14",
+    "bootstrap": "^4.4.1",
     "rxjs": "~6.4.0",
+    "sweetalert2": "^9.10.13",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"
   },

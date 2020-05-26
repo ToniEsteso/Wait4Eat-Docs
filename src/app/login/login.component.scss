@@ -1,0 +1,18 @@
+.login {
+  display: grid;
+  grid-template-areas:
+    "userName boton"
+    "password boton";
+  gap: 10px 50px;
+  padding: 10px;
+  &__userName {
+    grid-area: userName;
+  }
+  &__password {
+    grid-area: password;
+  }
+  &__contenedor-boton {
+    grid-area: boton;
+    height: 100%;
+  }
+}

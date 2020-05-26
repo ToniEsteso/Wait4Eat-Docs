@@ -1,0 +1,6 @@
+<div class="grupo-endpoints">
+  <div class="grupo-endpoints__titulo">{{tipo}}</div>
+  <div *ngFor="let endpoint of endpoints">
+    <app-endpoint [endpoint]="endpoint"></app-endpoint>
+  </div>
+</div>
